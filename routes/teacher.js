@@ -89,4 +89,62 @@ router.get("/profile/:profileID", auth, async (req, res) => {
   }
 });
 
+/**
+ * @method - POST
+ * @param - /create-test
+ * @description - Creating Test for the students using teacherID
+ */
+
+ router.post("/create-test", auth, async (req, res) => {
+  const {
+    teacherId,
+    testName,
+    category,
+    minutes,
+    rules,
+    className,
+    outOfMarks,
+    answers,
+    questions,
+  } = req.body;
+  console.log(questions, answers, rules);
+  try {
+    let createTest = await Test.findOne({
+      testName,
+      className,
+      category,
+    });
+    if (createTest) {
+      return res.status(400).json({
+        msg: "Test Already Created",
+      });
+    }
+
+    createTest = new Test({
+      teacherId,
+      testName,
+      category,
+      answers,
+      minutes,
+      className,
+      rules,
+      outOfMarks,
+      questions,
+    });
+
+    let data = await createTest.save();
+
+    const payload = {
+      data,
+    };
+
+    res.status(200).json({
+      payload,
+    });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Error in Saving");
+  }
+});
+
 module.exports = router;
