@@ -6,16 +6,6 @@
     box-shadow: 0 0 5px var(--box-shadow);
 }
 
-.ems__log__wrapper {
-    display: grid;
-    place-items: center;
-    margin-bottom: 15px;
-}
-
-.ems__logo {
-    max-width: 300px;
-}
-
 .btn-instructions {
     color: var(--secondary);
     border: none;
