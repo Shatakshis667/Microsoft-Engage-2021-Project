@@ -239,4 +239,29 @@ router.put("/assigend-to/:testID", auth, async (req, res) => {
   }
 });
 
+/**
+ * @method - DELETE
+ * @param - /delete-test/:testid
+ * @description - Delete a particular test using testID
+ */
+
+ router.delete("/delete-test/:testid", auth, async (req, res) => {
+  const testID = req.params.testid;
+  console.log(testID);
+  try {
+    const testData = await Test.findByIdAndDelete(testID, function (err) {
+      if (err) {
+        return res.status(400).json({ message: "failed to delete document" });
+      } else {
+        return res.status(200).json({
+          message: "successfully deleted",
+        });
+      }
+    });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Error in Deleting");
+  }
+});
+
 module.exports = router;
