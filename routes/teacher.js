@@ -179,36 +179,6 @@ router.put("/update-test/:testid", auth, async (req, res) => {
 
 /**
  * @method - PUT
- * @param - /update-profile/:profileID
- * @description - Updating Teacher profile using profileID
- */
-
-router.put("/update-profile/:profileID", auth, async (req, res) => {
-  const profileID = req.params.profileID;
-  const { firstName, lastName, email, password, phone } = req.body;
-  try {
-    const testData = await Teacher.findOneAndUpdate(
-      { _id: profileID },
-      { ...req.body },
-      function (err, updatedData) {
-        if (err) {
-          return res.status(400).json({ message: "failed to update profile" });
-        } else {
-          console.log(updatedData);
-          return res.status(200).json({
-            message: "profile succesfully updated",
-          });
-        }
-      }
-    );
-  } catch (err) {
-    console.log(err.message);
-    res.status(500).send("Error in Updating Profile");
-  }
-});
-
-/**
- * @method - PUT
  * @param - /assigend-to/:testID
  * @description - Fetching classes to which the test assigned using testID
  */

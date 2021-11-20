@@ -35,4 +35,104 @@ router.get("/profile/:profileID", auth, async (req, res) => {
   }
 });
 
+/**
+ * @method - GET
+ * @param - /tests/:studentClass
+ * @description - Fetch all the tests that student class assigned
+ */
+
+router.get("/tests/:studentClass", auth, async (req, res) => {
+  const studentClass = req.params.studentClass;
+
+  try {
+    await Test.find(
+      {
+        className: studentClass,
+      },
+      "-assignedTo -submitBy -teacherId -__v"
+    ).exec(function (err, obj) {
+      if (err) {
+        return res.status(400).json({ err });
+      } else {
+        return res.status(200).json({
+          obj,
+        });
+      }
+    });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Error in fetching Test Data");
+  }
+});
+
+/**
+ * @method - GET
+ * @param - /attempt-tests/:studentID
+ * @description - Fetch all attempted tests of student
+ */
+
+router.get("/attempt-tests/:studentID", auth, async (req, res) => {
+  const studentID = req.params.studentID;
+
+  try {
+    await Student.find({
+      _id: studentID,
+    }).exec(function (err, obj) {
+      if (err) {
+        return res.status(400).json({ err });
+      } else {
+        return res.status(200).json({
+          obj,
+        });
+      }
+    });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send(err);
+  }
+});
+
+/**
+ * @method - PUT
+ * @param - /submit-test/:testID
+ * @description - Submit particular test using testID
+ */
+
+router.put("/submit-test/:testID", auth, async (req, res) => {
+  const testID = req.params.testID;
+  const submittedData = req.body.submitBy;
+  const testName = req.body.testName;
+  const date = Date.now();
+
+  try {
+    await Test.updateOne(
+      { _id: testID },
+      {
+        $addToSet: { submitBy: [...submittedData] },
+        attempted: true,
+      },
+      async function (err, updatedData) {
+        if (err) {
+          return res.status(400).json({ message: "failed to submit test" });
+        } else {
+          await Student.updateOne(
+            { _id: submittedData[0].profileID },
+            {
+              $addToSet: {
+                attemptedTest: [{ testName, date, ...submittedData }],
+              },
+            }
+          );
+          return res.status(200).json({
+            message: "test submitted succesfully",
+          });
+        }
+      }
+    );
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Error in submitting test data");
+  }
+});
+
 module.exports = router;
