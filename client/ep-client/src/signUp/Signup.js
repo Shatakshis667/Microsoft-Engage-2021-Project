@@ -131,6 +131,7 @@ function Signup(props) {
                 name="role"
                 rules={[
                   {
+                    required: true,
                     message: "Please input your role!",
                   },
                 ]}

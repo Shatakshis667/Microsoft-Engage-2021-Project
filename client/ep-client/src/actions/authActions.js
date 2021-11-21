@@ -115,11 +115,21 @@ const userAccountCreated = () => {
   };
 };
 
-const openErrorNotification = () => {
+const openLoginErrorNotification = () => {
   const args = {
     message: "Error!",
     description:
       "Invalid Username or Password.",
+    duration: 3,
+  };
+  notification.open(args);
+};
+
+const openSignupErrorNotification = () => {
+  const args = {
+    message: "Error!",
+    description:
+      "Email Address aready in use. Try a new one.",
     duration: 3,
   };
   notification.open(args);
@@ -137,7 +147,6 @@ export const loginUser = (values) => (dispatch) => {
 
     body: JSON.stringify(values),
   };
-  //console.log("hellooo");
   fetch("/user/login", requestOptions)
     .then((response) => response.json())
     .then((data) => {
@@ -148,15 +157,14 @@ export const loginUser = (values) => (dispatch) => {
         localStorage.setItem("userProfile", JSON.stringify(data.payload.user));
         localStorage.setItem("profileID", data.payload.profileID);
         dispatch(receiveLogin(data.payload.user, data.payload.profileID));
-        // history.push("/studentHome");
       }
       else {
-        openErrorNotification();
+        openLoginErrorNotification();
         dispatch(loginError());
       }
     })
     .catch((error) => {
-      openErrorNotification();
+      openLoginErrorNotification();
       dispatch(loginError());
     });
 };
@@ -169,20 +177,19 @@ export const signUpUser = (values) => (dispatch) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(values),
   };
-  //console.log("Success:", values);
   fetch("/user/signup", requestOptions)
     .then((response) => response.json())
     .then((data) => {
       if (data.token) {
-        // localStorage.setItem("token", `Bearer ${data.token}`);
-        // localStorage.setItem('userProfile', JSON.stringify(data.payload.user));
-        // localStorage.setItem('profileID', data.payload.profileID);
         dispatch(receiveSignup(data.user));
-        //history.push("/studentHome");
+      }
+      else
+      {
+        openSignupErrorNotification();
+        dispatch(signupError());
       }
     })
     .catch((error) => {
-      //Do something with the error if you want!
       console.log(error)
       dispatch(signupError());
     });
@@ -192,59 +199,7 @@ export const accountCreated = () => (dispatch) => {
   dispatch(userAccountCreated());
 };
 
-// export const signupUser = (displayName, email, password, password2) => dispatch => {
-//   dispatch(requestsignup());
-//   //verifying password and name.
-//   if(displayName.length < 3){
-//     return dispatch(signupError("Name must have atleast 3 characters."));
-//   }
-
-//   if(displayName.length > 50){
-//     return dispatch(signupError("Name must have atmost 50 characters."));
-//   }
-
-//   if(!/^[a-zA-Z ]*$/.test(displayName)){
-//     return dispatch(signupError("Name must contain only alphabets."));
-//   }
-
-//   if(password !== password2){
-//     return dispatch(signupError("Passwords do not match"));
-//   }
-
-// };
-
 export const logoutUser = () => (dispatch) => {
   dispatch(requestLogout());
   dispatch(receiveLogout());
 };
-
-// export const verifyAuth = () => dispatch => {
-//   dispatch(verifyRequest());
-//   myFirebase.auth().onAuthStateChanged(user => {
-//     if (user !== null) {
-//       dispatch(receiveLogin(user));
-//     }
-//     dispatch(verifySuccess());
-//   });
-// };
-
-// export const sendPasswordResetLink = (email) => dispatch => {
-//   dispatch(sendingPassReset());
-//   myFirebase.auth().sendPasswordResetEmail(email)
-//   .then(()=>{
-//     dispatch(sendPassResetSuccess());
-//   })
-//   .catch(error=>{
-//     console.error(error);
-//     switch(error.code){
-//       case 'auth/invalid-email':
-//         dispatch(sendPassResetError("Invalid email address."));
-//         break;
-//       case 'auth/user-not-found':
-//         dispatch(sendPassResetError("User not found with the given email address."));
-//         break;
-//       default:
-//         dispatch(sendPassResetError("Failed to send password reset email."));
-//     }
-//   })
-// }
