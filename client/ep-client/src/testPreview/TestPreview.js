@@ -48,24 +48,6 @@ class TestPreview extends Component {
           JSON.stringify({ testName, _id, tM, rM })
         );
       }
-
-      //   const profileID = localStorage.getItem("profileID"),
-      //     completed = false;
-      //   const testData = JSON.parse(localStorage.getItem("trash"));
-      //   let updatingAttemptedMinutes = localStorage.getItem(testData._id);
-
-      //   const data = {
-      //     profileID,
-      //     testName,
-      //     _id,
-      //     completed,
-      //     minutes,
-      //     updatingAttemptedMinutes,
-      //   };
-      //   //console.log(this.props.selectedTest, "props")
-      //   if (_id) {
-      //    // this.props.updateTimer(data);
-      //   }
     } catch (e) {
       console.log(e);
     }
