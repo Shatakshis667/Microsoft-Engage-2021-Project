@@ -135,4 +135,62 @@ router.put("/submit-test/:testID", auth, async (req, res) => {
   }
 });
 
+/**
+ * @method - PUT
+ * @param - /update-test-status/:testID
+ * @description - Tracking how much time user spented on test using attemptedTime
+ */
+
+router.put("/update-test-status/:testID", auth, async (req, res) => {
+  const testID = req.params.testID;
+  const profileID = req.body.profileID;
+  const testName = req.body.testName;
+  const completed = req.body.completed;
+  const attemptedTime = req.body.attemptedTime;
+  const totalTime = req.body.totalTime;
+  //console.log(...req.body);
+  console.log(testID, profileID, testName, completed, attemptedTime, totalTime);
+  if (testID) {
+    try {
+      let studentData = await Student.findById(profileID);
+
+      let { testStatus } = studentData;
+      let test = testStatus.filter((t) => t.testID === testID);
+      if (test.length < 1) {
+        studentData.testStatus.push({
+          testID,
+          attemptedTime,
+          testName,
+          completed,
+          totalTime,
+        });
+        studentData.save();
+        return res.status(200).json({
+          studentData,
+        });
+      } else {
+        await Student.findOneAndUpdate(
+          { _id: profileID, "testStatus.testID": testID },
+          {
+            $set: {
+              "testStatus.$.attemptedTime": attemptedTime,
+            },
+          },
+          { new: true },
+          (err, obj) => {
+            return res.status(200).json({
+              obj,
+            });
+          }
+        );
+      }
+    } catch (err) {
+      console.log(err.message);
+      res.status(500).send("Error in updating test data");
+    }
+  } else {
+    res.status(500).send("Undefined Test ID");
+  }
+});
+
 module.exports = router;
