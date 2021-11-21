@@ -10,7 +10,7 @@ import TeacherDashboard from "../Teacher/Dashboard/Dashboard";
 import AttemptTest from "../attemptTest/AttemptTest";
 import Navbar from "../navbar";
 import TestInstruction from "../TestInstructions/TestInstruction";
-import TestPreview from "../testPreview/TestPreview";
+import TestPreview from "../testPreview/TestPreviewWrapper";
 import { connect } from "react-redux";
 import { Modal } from "antd";
 import { useHistory } from "react-router-dom";
