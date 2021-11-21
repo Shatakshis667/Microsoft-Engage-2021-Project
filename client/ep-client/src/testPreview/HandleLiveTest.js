@@ -5,7 +5,6 @@ import "./HandleLiveTest.css";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 import Footer from "./Footer";
-import { questions } from "./mockData";
 import Counter from "./Counter";
 
 class HandleLiveTest extends Component {
