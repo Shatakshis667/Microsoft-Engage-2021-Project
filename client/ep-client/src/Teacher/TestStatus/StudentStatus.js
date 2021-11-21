@@ -23,8 +23,12 @@ export default function StudentStatus(props) {
               Total Marks:{" "}
               <span className="status__testname">{student.totalMarks}</span>
             </div>
+            <div className="status__test__obtained">
+              Obtained Marks:{" "}
+              <span className="status__testname">{student.correct}</span>
+            </div>
             <div className="status__test__correct">
-              Marks:{" "}
+              Correct Answers:{" "}
               <span className="status__testname success-wihtoutFont">
                 {student.correct}
               </span>
