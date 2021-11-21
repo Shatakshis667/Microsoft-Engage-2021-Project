@@ -54,7 +54,7 @@ class Profile extends Component {
             <div className="avatar-wrapper">
               <Avatar
                 size={{ xs: 80, sm: 80, md: 80, lg: 80, xl: 90, xxl: 100 }}
-                src=""
+                src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg"
                 className="profile-image"
               />
               <Popover content={this.state.isVerified ? verfied : notVerfied}>
