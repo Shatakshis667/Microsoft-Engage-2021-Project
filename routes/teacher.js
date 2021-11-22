@@ -178,38 +178,6 @@ router.put("/update-test/:testid", auth, async (req, res) => {
 });
 
 /**
- * @method - PUT
- * @param - /assigend-to/:testID
- * @description - Fetching classes to which the test assigned using testID
- */
-
-router.put("/assigend-to/:testID", auth, async (req, res) => {
-  const testID = req.params.testID;
-  const { className } = req.body;
-  try {
-    await Test.updateOne(
-      { _id: testID },
-      {
-        $addToSet: { assignedTo: [...className] },
-      },
-      function (err, updatedData) {
-        if (err) {
-          return res
-            .status(400)
-            .json({ message: "failed to update assigendStudents" });
-        } else {
-          return res.status(200).json({
-            updatedData,
-          });
-        }
-      }
-    );
-  } catch (err) {
-    res.status(500).send("Error in Updating");
-  }
-});
-
-/**
  * @method - DELETE
  * @param - /delete-test/:testid
  * @description - Delete a particular test using testID
