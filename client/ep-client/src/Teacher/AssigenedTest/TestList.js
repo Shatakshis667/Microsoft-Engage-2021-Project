@@ -54,6 +54,12 @@ export default function TestList(props) {
         <div className="select__test__search__box">
           <p className="search__box__heading">Search Test</p>
           {<SearchBox handleListData={handleListData} />}
+          {tests.length == 0 && 
+            <div className="no__results">
+            No results found.
+            </div>
+          }
+          {tests.length > 0 &&
           <div className="test__wrapper__body">
             <p className="test__wrapper__heading select__heading">
               Select Test
@@ -150,12 +156,15 @@ export default function TestList(props) {
               )}
             </div>
           </div>
+          }
         </div>
+        {tests.length > 0 &&
         <div className="select__button">
           <Button type="primary" onClick={handleButtonClick}>
             Continue
           </Button>
         </div>
+        }
       </div>
     </>
   );
