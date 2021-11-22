@@ -17,7 +17,7 @@ import { useHistory } from "react-router-dom";
 import Profile from "../profile/Profile";
 import { Roles } from "../Roles/roles";
 import CreateTest from "../Teacher/CreateTest/CreateTest";
-import AssignedTestsWrapper from "../Teacher/AssigenedTest/AssignedTests";
+import AssignedTestsWrapper from "../Teacher/AssigenedTest/AssignedTestsWrapper";
 import TestStatus from "../Teacher/TestStatus/TestStatus";
 import { message } from "antd";
 import { Offline, Online } from "react-detect-offline";
