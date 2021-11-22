@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Input, Popover } from "antd";
 import { AiFillPlusCircle } from "react-icons/ai";
 
-export default function Rules(props) {
+export default function Questions(props) {
   const [questionDescripiton, setQuestionDescripiton] = useState("");
   const [opiton1, setOption1] = useState("");
   const [opiton2, setOption2] = useState("");
@@ -11,7 +11,7 @@ export default function Rules(props) {
   const [answer, setAnswer] = useState("");
   const submitInput = (
     <div>
-      <p className="verified-popover ">Add Question</p>
+      <p className="verified-popover ">Add Question (Note: Add at least 1 Question)</p>
     </div>
   );
 

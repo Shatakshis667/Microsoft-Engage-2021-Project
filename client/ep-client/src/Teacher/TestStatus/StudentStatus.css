@@ -28,9 +28,16 @@
     padding: 5px;
     font-weight: 500;
 }
+
 .gutter-col-adder{
     margin: 15px 0px;
 }
+
 .student__status{
     padding: 2vw 5vw;
+}
+
+.no__results{
+    font-size: medium;
+    color: #8f8e8e;
 }

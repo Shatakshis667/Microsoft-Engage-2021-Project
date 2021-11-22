@@ -37,11 +37,10 @@ function TestInstruction(props) {
 
   const handleButtonClick = () => {
     confirm({
-      title: "Do you give test now?",
+      title: "Do you want to start the test?",
       icon: <ExclamationCircleOutlined />,
-      content: "Once you click OK , timer will start!",
+      content: "Once you click OK, the timer will start!",
       onOk() {
-        // console.log(props.selectedTest);
         console.log("OK");
         history.push("/start-test");
       },
@@ -122,8 +121,8 @@ function TestInstruction(props) {
                           Next
                         </Button>
                         <p className="button__description">
-                          Next: By clicking Next button next question will
-                          appear to user
+                          Next: By clicking the Next button, the next question will
+                          appear.
                         </p>
                       </div>
                       <div className="navigation__buttons__Feature">
@@ -134,8 +133,8 @@ function TestInstruction(props) {
                           Previous
                         </Button>
                         <p className="button__description">
-                          Next: By clicking Next button next question will
-                          appear to user
+                          Previous: By clicking the Previous button, the previous question will
+                          appear.
                         </p>
                       </div>
                       <div className="navigation__buttons__Feature">
@@ -146,8 +145,7 @@ function TestInstruction(props) {
                           Flag
                         </Button>
                         <p className="button__description">
-                          Flag: By clicking Next button next question will
-                          appear to user
+                          Flag: By clicking the Flag button, you can Flag a question.
                         </p>
                       </div>
                       <div className="navigation__buttons__Feature">
@@ -158,8 +156,7 @@ function TestInstruction(props) {
                           End Test
                         </Button>
                         <p className="button__description">
-                          End Test: By clicking Next button next question will
-                          appear to user
+                          End Test: By clicking the End Test, you can end the test.
                         </p>
                       </div>
                     </div>

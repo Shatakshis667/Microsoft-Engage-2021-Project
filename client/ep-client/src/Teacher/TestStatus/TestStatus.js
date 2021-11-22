@@ -12,6 +12,10 @@ function TestStatus(props) {
   return (
     <>
       <div className="container student__status">
+        {students.length <= 0 && <div className="no__results">
+          No Student Records found.
+          </div>
+        }
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           {students.length > 0 &&
             students.map((student, index) => (
