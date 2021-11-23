@@ -39,23 +39,27 @@ export default function TestList(props) {
     selectRef = e.currentTarget;
     e.currentTarget.classList.add("selected__test");
     selectedData = tests[index];
-
-    //console.log();
   };
 
   return (
     <>
-      <div className="select__test__wrapper">
+       <div className="select__test__wrapper">
         <p className="test__wrapper__heading">Available Test</p>
         <div className="select__test__search__box">
           <p className="search__box__heading">Search Test</p>
           {<SearchBox handleListData={handleListData} />}
+          {tests.length == 0 && 
+            <div className="no__results">
+            No results found.
+            </div>
+          }
+          {tests.length > 0 &&
           <div className="test__wrapper__body">
             <p className="test__wrapper__heading select__heading">
               Select Test
             </p>
             <div className="select__test__body">
-              {tests && tests.length > 0 ? (
+              {tests.length > 0 ? (
                 searching !== "" ? (
                   searchTests.map((test, index) => (
                     <div
@@ -69,8 +73,12 @@ export default function TestList(props) {
                         {test.testName}
                       </p>
                       <div className="test__time">
-                        <p className="time start">Start: Nov 26 2021 12:14PM</p>
-                        <p className="time end">End: Nov 29 2021 11:50PM</p>
+                        <p className="time start">
+                          Published On: Nov 26 2021 11:30AM
+                        </p>
+                        <p className="time end">
+                          Attempted On: Nov 29 2021 10:30 PM
+                        </p>
                       </div>
                     </div>
                   ))
@@ -87,8 +95,12 @@ export default function TestList(props) {
                         {test.testName}
                       </p>
                       <div className="test__time">
-                        <p className="time start">Start: Nov 26 2021 12:14PM</p>
-                        <p className="time end">End: Nov 29 2021 11:50PM</p>
+                        <p className="time start">
+                          Published On: Nov 26 2021 11:30AM
+                        </p>
+                        <p className="time end">
+                          Attempted On: Nov 29 2021 10:30 PM
+                        </p>
                       </div>
                     </div>
                   ))
@@ -138,12 +150,15 @@ export default function TestList(props) {
               )}
             </div>
           </div>
+          }
         </div>
+        {tests.length > 0 &&
         <div className="select__button">
           <Button type="primary" onClick={handleButtonClick}>
             Continue
           </Button>
         </div>
+        }
       </div>
     </>
   );
