@@ -9,10 +9,13 @@ import StudentDashboard from "../dashboard/Dashboard";
 import TeacherDashboard from "../Teacher/Dashboard/Dashboard";
 import AttemptTest from "../attemptTest/AttemptTest";
 import Navbar from "../navbar";
+import Result from "../result/ResultWrapper";
 import TestInstruction from "../TestInstructions/TestInstruction";
-import TestPreview from "../testPreview/TestPreviewWrapper";
+import IndividualResult from "../result/ShowResult";
+import TestPreviewWrapper from "../testPreview/TestPreviewWrapper";
 import { connect } from "react-redux";
 import { Modal } from "antd";
+import { ExclamationCircleOutlined } from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
 import Profile from "../profile/Profile";
 import { Roles } from "../Roles/roles";
@@ -76,6 +79,12 @@ function App(props) {
             path="/create-test"
             component={Roles.teacher === role ? CreateTest : AttemptTest}
           />
+          <ProtectedRoute exact={true} path="/result" component={Result} />
+          <ProtectedRoute
+            exact={true}
+            path={`/result/${selectedTestName}`}
+            component={IndividualResult}
+          />
           <ProtectedRoute
             exact={true}
             path="/test-instructions"
@@ -84,7 +93,7 @@ function App(props) {
           <ProtectedRoute
             exact={true}
             path="/start-test"
-            component={TestPreview}
+            component={TestPreviewWrapper}
           />
           <ProtectedRoute exact={true} path="/profile" component={Profile} />
           <ProtectedRoute
