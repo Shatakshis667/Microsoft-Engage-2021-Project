@@ -31,10 +31,6 @@ function ShowResult(props) {
           <Col className="gutter-row" xs={24} sm={24} md={14} xl={14}>
             <div className="result__wrapper">
               <div className="result__wrapper__header">
-                {/* <div className="result__heading">
-                  <div className="result__test__name">Name: </div>
-                  <div className="result__test__name__field">{name}</div>
-                </div> */}
                 <div className="result__heading">
                   <div className="result__test__name">Test Name: </div>
                   <div className="result__test__name__field">{testName}</div>
@@ -105,6 +101,15 @@ function ShowResult(props) {
                     </div>
                   </div>
                   <div className="correct__attempted">
+                    <div className="percentage">
+                      <div className="percentage__heading">
+                        Correct Answers: {rightAnswers}
+                      </div>
+                      <Progress
+                        percent={Math.floor((rightAnswers / totalMarks) * 100)}
+                        status="active"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
