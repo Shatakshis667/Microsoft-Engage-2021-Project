@@ -4,8 +4,11 @@ import "./StudentStatus.css";
 
 export default function StudentStatus(props) {
   const student = props.student;
-  const className = props.className;
   const testName = props.testName;
+  const totalMarks = student.totalMarks;
+  const correct = student.correct;
+  const wrong = student.wrong;
+  const percentage = Math.floor((correct / totalMarks) * 100)
   return (
     <>
       <Col className="gutter-row gutter-col-adder" sm={24} xs={24} md={6} lg={6}>
@@ -21,26 +24,30 @@ export default function StudentStatus(props) {
             </div>
             <div className="status__test__total">
               Total Marks:{" "}
-              <span className="status__testname">{student.totalMarks}</span>
+              <span className="status__testname">{totalMarks}</span>
             </div>
             <div className="status__test__obtained">
               Obtained Marks:{" "}
-              <span className="status__testname">{student.correct}</span>
+              <span className="status__testname">{correct}/{totalMarks}</span>
+            </div>
+            <div className="status__test__total">
+              Percentage:{" "}
+              <span className="status__testname">{percentage}%</span>
             </div>
             <div className="status__test__correct">
               Correct Answers:{" "}
               <span className="status__testname success-wihtoutFont">
-                {student.correct}
+                {correct}
               </span>
             </div>
             <div className="status__test__wrong">
               Wrong Answers:{" "}
-              <span className="status__testname danger">{student.wrong}</span>
+              <span className="status__testname danger">{wrong}</span>
             </div>
             <div className="status__test__unanswered">
               Not Answered:{" "}
               <span className="status__testname primary-wihtoutFont">
-                {student.totalMarks - (student.correct - - student.wrong)}
+                {totalMarks - (correct - - wrong)}
               </span>
             </div>
           </div>
