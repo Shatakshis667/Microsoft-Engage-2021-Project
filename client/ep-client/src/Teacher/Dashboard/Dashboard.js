@@ -2,12 +2,10 @@ import React from "react";
 import { Row, Col } from "antd";
 import Classes from "./Classes";
 import AssignedTests from "./AssignedTests";
-import "./Dashboard.css";
 
 function Dashboard(props) {
   const trimLength = 8;
-  // console.log(userInfo);
-
+  
   return (
     <>
       <div className="container dashboard">
