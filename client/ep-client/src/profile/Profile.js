@@ -9,17 +9,14 @@ class Profile extends Component {
     super(props);
     this.state = {
       firstName: undefined,
-      isVerified: undefined,
       lastName: undefined,
       email: undefined,
       phone: undefined,
       role: undefined,
-      section: undefined,
-      isVerified: undefined,
+      section: undefined
     };
   }
   submitForm = (values) => {
-    // props.sendSignUpRequest(values);
     console.log(values);
   };
   static getDerivedStateFromProps(props, state) {
@@ -27,26 +24,13 @@ class Profile extends Component {
       firstName: props.user.firstName,
       lastName: props.user.lastName,
       email: props.user.email,
-      isVerified: props.userisVerified,
       phone: props.user.phone,
       role: props.user.role,
       section: props.user.section,
-      isVerified: props.user.isVerified,
       className: props.user.className,
     };
   }
   render() {
-    console.log(this.props.user);
-    const verfied = (
-      <div>
-        <p className="verified-popover">Verified !</p>
-      </div>
-    );
-    const notVerfied = (
-      <div>
-        <p className="notverifieid-popover">Not Verified!</p>
-      </div>
-    );
     return (
       <>
         <Row justify="center" align="middle" className="hero">
@@ -57,15 +41,6 @@ class Profile extends Component {
                 src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg"
                 className="profile-image"
               />
-              <Popover content={this.state.isVerified ? verfied : notVerfied}>
-                <img
-                  src={
-                    this.state.isVerified ? "/verified.png" : "/notVerified.png"
-                  }
-                  alt="verification"
-                  className="verified"
-                />
-              </Popover>
               <p
                 className="profile__heading"
                 style={{ margin: 0, textAlign: "center" }}
