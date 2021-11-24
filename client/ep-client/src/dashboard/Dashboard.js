@@ -3,13 +3,10 @@ import { Row, Col } from "antd";
 import { connect } from "react-redux";
 import TestCard from "./TestCard";
 import ResultCard from "./ResultCard";
-import "./Dashboard.css";
 
 function Dashboard(props) {
   const { studentClassName, profileID, userInfo } = props;
   const trimLength = 8;
-
-  // console.log(userInfo);
 
   return (
     <>
