@@ -1,6 +1,5 @@
 .student__status__wrapper {
     box-shadow: 0 0 5px var(--box-shadow);
-    ;
 }
 
 .status__header {
@@ -35,6 +34,13 @@
 
 .student__status{
     padding: 2vw 5vw;
+}
+
+.className__container{
+    margin: 10px 0px;
+    text-align: center;
+    font-size: xx-large;
+    color: var(--primary);
 }
 
 .no__results{

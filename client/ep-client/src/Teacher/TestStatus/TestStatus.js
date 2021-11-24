@@ -12,7 +12,10 @@ function TestStatus(props) {
   return (
     <>
       <div className="container student__status">
-        {students.length <= 0 && <div className="no__results">
+        <div className="className__container">
+          Assigned to: {className}
+        </div>
+        {students.length == 0 && <div className="no__results">
           No Student Records found.
           </div>
         }
@@ -20,7 +23,6 @@ function TestStatus(props) {
           {students.length > 0 &&
             students.map((student, index) => (
               <StudentStatus
-                className={className}
                 testName={testName}
                 student={student}
                 key={index}
