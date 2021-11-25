@@ -20,7 +20,10 @@ function SelectTest(props) {
   return (
     <>
       <div className="select__test__container">
-       <TestList tests={tests} heading={heading} handleSelectedTest={handleSelectedTest} /> 
+       <TestList
+        tests={tests}
+        heading={heading}
+        handleSelectedTest={handleSelectedTest} /> 
       </div>
     </>
   );
