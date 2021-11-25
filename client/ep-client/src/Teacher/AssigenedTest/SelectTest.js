@@ -7,7 +7,6 @@ import TestList from "./TestList";
 
 function SelectTest(props) {
   const { tests, profileID } = props;
-  console.log(props);
 
   const handleSelectedTest = (testData) => {
     props.selectedTest(testData);

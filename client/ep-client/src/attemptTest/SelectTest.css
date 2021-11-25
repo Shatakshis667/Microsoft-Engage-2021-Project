@@ -8,10 +8,16 @@
 
 p.test__wrapper__heading {
     padding: 5px 0;
+    font-size: x-large;
+    text-align: center;
+    color: var(--primary);
 }
 
 .select__heading {
     margin-top: 20px;
+    font-size: 14px !important;
+    color: var(--dark-primary) !important;
+    text-align: left !important;
 }
 
 .select__test__body {
@@ -47,12 +53,13 @@ p.test__wrapper__heading {
 }
 
 .select__test {
-    font-size: var( --typography-sm);
+    font-size: medium;
     font-weight: 400;
 }
 
 .time {
     margin: 0;
+    font-size: small;
     color: var(--dark-secondary);
 }
 
