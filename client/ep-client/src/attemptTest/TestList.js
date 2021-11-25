@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "antd";
-import SearchBox from "./SearchBox";
+import SearchBox from "../homeComponents/SearchBox";
 import { useHistory } from "react-router-dom";
 import { Skeleton } from "antd";
 
@@ -9,6 +9,7 @@ export default function TestList(props) {
   const [tests, setTests] = useState([]);
   const [searchTests, setSearchTests] = useState([]);
   const [searching, setSearching] = useState("");
+  const heading = props.heading;
 
   useEffect(() => {
     setTests(props.tests.reverse());
@@ -43,8 +44,8 @@ export default function TestList(props) {
 
   return (
     <>
-       <div className="select__test__wrapper">
-        <p className="test__wrapper__heading">Available Test</p>
+      <div className="select__test__wrapper">
+        <p className="test__wrapper__heading">{heading}</p>
         <div className="select__test__search__box">
           <p className="search__box__heading">Search Test</p>
           {<SearchBox handleListData={handleListData} />}

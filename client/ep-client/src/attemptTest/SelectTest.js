@@ -7,7 +7,7 @@ import TestList from "./TestList";
 
 function SelectTest(props) {
   const { tests, studentClassName, profileID } = props;
-
+  const heading = "Available Test";
   const handleSelectedTest =(testData)=>{
       props.selectedTest(testData);
   }
@@ -20,7 +20,7 @@ function SelectTest(props) {
   return (
     <>
       <div className="select__test__container">
-       <TestList tests={tests} handleSelectedTest={handleSelectedTest} /> 
+       <TestList tests={tests} heading={heading} handleSelectedTest={handleSelectedTest} /> 
       </div>
     </>
   );
