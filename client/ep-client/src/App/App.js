@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Home from "../home/Home";
-import "./App.css";
 import Login from "../logIn/Login";
 import Signup from "../signUp/Signup";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -15,7 +14,6 @@ import IndividualResult from "../result/ShowResult";
 import TestPreviewWrapper from "../testPreview/TestPreviewWrapper";
 import { connect } from "react-redux";
 import { Modal } from "antd";
-import { ExclamationCircleOutlined } from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
 import Profile from "../profile/Profile";
 import { Roles } from "../Roles/roles";

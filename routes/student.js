@@ -93,6 +93,42 @@ router.get("/attempt-tests/:studentID", auth, async (req, res) => {
 });
 
 /**
+ * @method - POST
+ * @param - /results/:studentID
+ * @description - Fetch student results using studentID
+ */
+
+router.post("/results/:studentID", auth, async (req, res) => {
+  const studentID = req.params.studentID;
+  const { testID } = req.body;
+
+  try {
+    await Test.find(
+      {
+        _id: testID,
+      },
+      "submitBy -_id",
+      function (err, obj) {
+        if (err) {
+          return res.status(400).json({ err });
+        } else {
+          const result = obj[0].submitBy.filter((student, index) => {
+            return student.id === studentID;
+          });
+
+          return res.status(200).json({
+            result,
+          });
+        }
+      }
+    );
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Error in fetching Test Data");
+  }
+});
+
+/**
  * @method - PUT
  * @param - /submit-test/:testID
  * @description - Submit particular test using testID

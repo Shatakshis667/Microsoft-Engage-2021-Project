@@ -80,6 +80,7 @@ body {
   pointer-events: none !important;
 }
 
+/* media queries */
 @media(min-width:768px) {
   .dashboard {
     margin-top: 10vh;

@@ -23,6 +23,7 @@ export default function (state = initialState, action) {
 
     case UPDATE_ATTEMPT_TEST_SUCCESS:
       // console.log("login success fired", action.obj)
+      //console.log(action.data);
       const checker = state.initializeTimer;
       return {
         ...state,

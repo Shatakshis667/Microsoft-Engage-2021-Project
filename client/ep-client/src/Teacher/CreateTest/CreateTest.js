@@ -109,8 +109,8 @@ class CreateTest extends Component {
 
   openNotification = () => {
     const args = {
-      message: "Test Created",
-      description: "Congratulations, Your Test created successfully.",
+      message: "Test Created!",
+      description: "Congratulations, your test is created successfully.",
       duration: 3,
     };
     notification.open(args);
@@ -146,7 +146,7 @@ class CreateTest extends Component {
       <>
         <Row justify="center" align="middle">
           <Col xs={22} sm={22} md={10} lg={10} className="signup__container">
-            <p className="sub-title__signup"> Create New Test</p>
+            <p className="sub-title__signup"> Create Test</p>
             <Form
               name="basic"
               className="create__test__form"

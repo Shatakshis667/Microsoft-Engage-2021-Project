@@ -36,7 +36,7 @@ function ShowResult(props) {
                   <div className="result__test__name__field">{testName}</div>
                 </div>
                 <div className="result__heading">
-                  <div className="result__test__name">Time Taken: </div>
+                  <div className="result__test__name">Total Time: </div>
                   <div className="result__test__name__field">
                     {submitMinutes ? submitMinutes : "XX"} minutes
                   </div>
@@ -73,7 +73,6 @@ function ShowResult(props) {
                       ]}
                       options={{
                         title: "Marks Distribution",
-                        // Just add this option
                         pieHole: 0.45,
                       }}
                       rootProps={{ "data-testid": "3" }}

@@ -1,9 +1,9 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import "./HomeComponents.css"
-import Snap1 from './images/Carousel-1.jpg';
-import Snap2 from './images/Carousel-2.jpg';
-import Snap3 from './images/Carousel-3.jpg';
+import Carousel1 from './images/Carousel-1.jpg';
+import Carousel2 from './images/Carousel-2.jpg';
+import Carousel3 from './images/Carousel-3.jpg';
 
 export default function CarouselComponent() {
 return (
@@ -12,7 +12,7 @@ return (
 		<Carousel.Item interval={1500}>
 		<img
 			className="d-block w-100 h-20"
-			src={Snap1}
+			src={Carousel1}
 			alt="Image One"
 			height="auto"
 		/>
@@ -24,7 +24,7 @@ return (
 		<Carousel.Item interval={500}>
 		<img
 			className="d-block w-100"
-			src={Snap2}
+			src={Carousel2}
 			alt="Image Two"
 		/>
 		<Carousel.Caption>
@@ -35,7 +35,7 @@ return (
 		<Carousel.Item interval={500}>
 		<img
 			className="d-block w-100"
-			src={Snap3}
+			src={Carousel3}
 			alt="Image Two"
 		/>
 		<Carousel.Caption>

@@ -46,7 +46,6 @@ export const fetchClasses = (values) => (dispatch) => {
     })
     .catch((error) => {
       console.log(error);
-      //Do something with the error if you want!
       dispatch(ClassesError());
     });
 };

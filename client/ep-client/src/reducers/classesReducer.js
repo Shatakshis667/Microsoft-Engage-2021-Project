@@ -14,12 +14,14 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_CLASSES_REQUEST:
+      // console.log("login success fired", action.obj)
       return {
         ...state,
         isLoading: true,
       };
 
     case FETCH_CLASSES_SUCCESS:
+      // console.log("login success fired", action.obj)
       return {
         ...state,
         isLoading: false,
@@ -28,6 +30,7 @@ export default function (state = initialState, action) {
       };
 
     case FETCH_CLASSES_FAILURE:
+      // console.log("login success fired", action.obj)
       return {
         ...state,
         isfetched: false,

@@ -5,8 +5,6 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import "./Navbar.css";
 
-
-
 class Navbar extends Component {
   state = {
     current: "mail",

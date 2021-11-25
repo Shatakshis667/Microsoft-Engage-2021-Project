@@ -5,8 +5,6 @@ import { logoutUser } from "../actions/authActions";
 import { connect } from "react-redux";
 import { Roles } from "../Roles/roles";
 import { useLocation } from 'react-router-dom'
-// const SubMenu = Menu.SubMenu;
-// const MenuItemGroup = Menu.ItemGroup;
 
 const { useBreakpoint } = Grid;
 
@@ -14,10 +12,7 @@ const LeftMenu = (props) => {
   const [isAuthenticated, setisAuthenticated] = useState(false);
   const location = useLocation();
 
-  
-  // const role = props.role;
   const role = props.userInfo.role;
-  //console.log(props)
 
   useEffect(() => {
     setisAuthenticated(props.isAuthenticated);
@@ -41,7 +36,7 @@ const LeftMenu = (props) => {
   const profileRoute = isAuthenticated ? "/profile" : "";
   const createTestRoute = isAuthenticated ? "/create-test" : "";
   const assignedTestRoute = isAuthenticated ? "/assigned-test" : "";
-  //console.log(role)
+
   const style ={
     display: (location.pathname==="/start-test")?("none"):("block")
   }

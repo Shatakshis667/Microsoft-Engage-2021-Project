@@ -101,11 +101,9 @@ export const fetchAssignedTests = (profileID) => async (dispatch) => {
         } else {
           dispatch(receiveAssignedTest(data.obj));
         }
-        // history.push("/studentHome");
       }
     })
     .catch((error) => {
-      //Do something with the error if you want!
       console.log(error);
       dispatch(AssignedTestError());
     });

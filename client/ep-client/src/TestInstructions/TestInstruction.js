@@ -7,7 +7,6 @@ import { ExclamationCircleOutlined } from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
 
 function TestInstruction(props) {
-  //console.log(props.selectedTest);
   const history = useHistory();
   const { confirm } = Modal;
   const { tests} = props;
