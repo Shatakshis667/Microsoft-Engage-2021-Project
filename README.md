@@ -12,11 +12,14 @@ This project has been built solely during the period of **Microsoft Engage'21 Me
 
 - [x] Status : Accomplised Successfully
 
+
 ## 🎯 Flow Diagram
 <img width=70% src="https://user-images.githubusercontent.com/51702245/142895712-17f16c4d-c56d-42bd-b6c6-23ba1a68ecbf.jpg" >
 
+
 ## 🎯 Links for project:
  Video link : 
+
 
 ## 🎯 Agile methology and workflow:
 Agile methodology was followed by implementation of a sprint of 5 days in a week for 3 weeks along with continuous integration and development using Git version control. The website has been hosted on Heroku. The intent of the project, customer viewpoint, visual hierarchy and comfortable colour scheme were in mind while developing this project. Bugs were solved according to priority scale.
@@ -32,6 +35,7 @@ Priority scale : P0 (Maximum) to P4 (Minimum)
 Weekly updates are compiled in this document: [Agile Workflow](https://docs.google.com/document/d/1nBqHS3zFN9k4Sem4wbDv3SVs2QYgd6veyrVNKy7SMJY/edit?usp=sharing) <br>
 Link to GitHub Project Dashboard: [Project Dashboard](https://github.com/users/Shatakshis667/projects/2)
 
+ 
 ## 🎯 Features:
 Check out the detailed document for features: [ExamPlus Features](https://docs.google.com/document/d/1kWqUSSMTywZP3J7nt4YDqmYmVTypFjfXcYraaN3agBE/edit?usp=sharing)
 Feature | Feature 
@@ -45,7 +49,6 @@ Feature | Feature
 |**Results (Student)**: Students can check the results of an attempted test. Graphical formations developed using react-google-charts. <br><br> ![Result (Student)](https://user-images.githubusercontent.com/51702245/143594986-99ab613d-c710-40c6-b70a-2f927030615a.png)| **Live Test features**: <br><ul><li>The test is resumable.</li><li>Test countdown timer.</li><li>Only one attempt per test</li><li>Auto Submit Test on completion of the test duration.</li><li>Next and previous options.</li><li>Can clear the selected response to a question.</li><li>Can flag a particular question during the test.</li> </ul> |
 
  
-
 ## 🎯 Technologies used:
 #### Backend : <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="Node.js" src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node-dot-js&logoColor=white"/><img alt="Express.js" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"/> 
 #### Frontend :  <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/><img alt="React" src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"/><img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/>
@@ -53,6 +56,7 @@ Feature | Feature
 #### Version Control : <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/>  
 #### Hosting : <img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"/>
 ###### You can also see the list of dependencies in the package.json file.
+ 
  
 ## 🎯 Installation/Environment Setup:
 
@@ -107,6 +111,7 @@ Feature | Feature
   
  ###### NOTE: It would automatically spin up a development server for you on ```PORT:3000``` & backend server on ```PORT 5000```
 
+ 
 ## 🎯 Future Scopes:-
 Feature | Explanation
 ------------ | -------------
@@ -114,5 +119,7 @@ Feature | Explanation
 |Update Profile| Allowing Users to update their profile.|
 |Warning messages| Warning pop-ups when a student tries to move out of the test.|
 |Update and Delete Test| Allowing Teachers to update and delete the tests they have assigned.|
-
-Thank you ! Microsoft Team for such a wonderful mentorship program ❤️
+ 
+ 
+ ## 🎯 Conclusion:-
+I would like to thank my mentor for their guidance and the Microsoft Team for curating this wonderful learning experience and for all the informative sessions. ❤️
