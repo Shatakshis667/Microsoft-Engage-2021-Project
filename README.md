@@ -28,9 +28,12 @@ Priority scale : P0 (Maximum) to P4 (Minimum)
 | Week 1: <br>(Design Phase & Initial Development) | <ul><li>P0: Basic app built by exploring technologies. Set up Node.js and Express for backend, React for front-end, and MongoDB for the database.</li> <li>P1: Develop Home Page UI and Backend</li> <li>P1: Authorization Page UI (Sign-in and Sign up options)</li><li>P2: JWT Authorization Backend Set-Up</li><li>P2: Access Control Set-up (Separate Interface for Teacher and Student)</li><li>P3: Build the profile section for users</li></ul>  |   Set-up successful, Initial Development (Phase 1) completed            |
 | Week 2: <br>(Developing major features) | <ul><li>P0: Develop the Create Test functionalities </li><li>P0: Develop the Attempt Test functionalities </li><li>P1: Develop Test Instructions and the Test Live Preview</li><li>P2: Assigned Tests and Available Tests Preview for teachers and students respectively. </li><li>P3: Test Status and Result compilation</li> |    Major features implemented and Bugs resolved             |
 | Week 3: <br>(Conclusion) | <ul><li>P1: Develop Result functionality with graphs</li><li>P0: Test Preview (Bug fix)</li><li>P2: Develop Final Dashboard functionality</li><li>P3: [Conclusion] Code clean-up, removing redundant code, and maintaining proper documentation</li><li>P4: Hosting the Website</li></ul>    |     Problem Statement completed successfully, improved Code Maintainability  |
+ 
+Weekly updates are compiled in this document: [Agile Workflow](https://docs.google.com/document/d/1nBqHS3zFN9k4Sem4wbDv3SVs2QYgd6veyrVNKy7SMJY/edit?usp=sharing)
+Link to GitHub Project Dashboard: [Project Dashboard](https://github.com/users/Shatakshis667/projects/2)
 
 ## 🎯 Features:
-Check out the detailed document: [ExamPlus Features] (https://docs.google.com/document/d/1kWqUSSMTywZP3J7nt4YDqmYmVTypFjfXcYraaN3agBE/edit?usp=sharing)
+Check out the detailed document for features: [ExamPlus Features](https://docs.google.com/document/d/1kWqUSSMTywZP3J7nt4YDqmYmVTypFjfXcYraaN3agBE/edit?usp=sharing)
 Feature | Feature 
 -------- | -------- 
 |**Home Page**: Home Page contains the website information customized using React and Bootstrap. <br><br> ![Home Page](https://user-images.githubusercontent.com/51702245/143594962-4162a7bd-a201-4798-9a7f-415c1e213a6e.gif) |**Sign-in**: Sign In options for registered users. Mouse Interactive UI developed using react-particle-js. <br><br> ![Sign In](https://user-images.githubusercontent.com/51702245/143594988-23e0876c-3669-4d34-891f-d249674354a8.gif) |
