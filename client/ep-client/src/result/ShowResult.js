@@ -62,7 +62,7 @@ function ShowResult(props) {
                 <div className="marks__info">
                   <div className="marks__chart">
                     <Chart
-                      width={"100%"}
+                      width={"105%"}
                       height={"100%"}
                       chartType="PieChart"
                       loader={<div>Loading Chart</div>}
