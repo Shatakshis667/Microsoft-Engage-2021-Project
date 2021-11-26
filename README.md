@@ -110,6 +110,9 @@ Feature | Feature
 ## 🎯 Future Scopes:-
 Feature | Explanation
 ------------ | -------------
-
+|Upload Profile Picture| Allowing Users to upload their profile pictures.|
+|Update Profile| Allowing Users to update their profile.|
+|Warning messages| Warning pop-ups when a student tries to move out of the test.|
+|Update and Delete Test| Allowing Teachers to update and delete the tests they have assigned.|
 
 Thank you ! Microsoft Team for such a wonderful mentorship program ❤️
