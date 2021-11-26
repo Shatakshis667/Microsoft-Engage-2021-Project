@@ -21,13 +21,13 @@ This project has been built solely during the period of **Microsoft Engage'21 Me
 ## 🎯 Agile methology and workflow:
 Agile methodology was followed by implementation of a sprint of 5 days in a week for 3 weeks along with continuous integration and development using Git version control. The website has been hosted on Heroku. The intent of the project, customer viewpoint, visual hierarchy and comfortable colour scheme were in mind while developing this project. Bugs were solved according to priority scale.
 
-Priority scale : P5 (Maximum) to P1 (Minimum)
+Priority scale : P0 (Maximum) to P4 (Minimum)
 
 | Week | Task |  Remarks |
 |------|------|---------|
-| Week 1: <br>(Design Phase & Initial Development) | <ul><li>P5: Basic app built by exploring technologies. Set up Node.js and Express for backend, React for front-end, and MongoDB for the database.</li> <li>P4: Develop Home Page UI and Backend</li> <li>P3: Authorization Page UI (Sign-in and Sign up options)</li><li>P3: JWT Authorization Backend Set-Up</li><li>P3: Access Control Set-up (Separate Interface for Teacher and Student)</li><li>P2: Build the profile section for users</li></ul>  |   Set-up successful, Initial Development (Phase 1) completed            |
-| Week 2: <br>(Developing major features) | <ul><li>P5: Develop the Create Test functionalities </li><li>P4: Develop the Attempt Test functionalities </li><li>P4: Develop Test Instructions and the Test Preview</li><li>P2: Result compilation</li> |    Major features implemented and Bugs resolved             |
-| Week 3: <br>(Conclusion) | <ul><li>P4: Develop Result functionality with graphs</li><li>P5: Test Preview (Bug fix)</li><li>P3: Develop Final Dashboard functionality</li><li>P2: [Conclusion] Code clean-up, removing redundant code, and maintaining proper documentation</li><li>P3: Hosting the Website</li></ul>    |     Problem Statement completed successfully, improved Code Maintainability  |
+| Week 1: <br>(Design Phase & Initial Development) | <ul><li>P0: Basic app built by exploring technologies. Set up Node.js and Express for backend, React for front-end, and MongoDB for the database.</li> <li>P1: Develop Home Page UI and Backend</li> <li>P3: Authorization Page UI (Sign-in and Sign up options)</li><li>P2: JWT Authorization Backend Set-Up</li><li>P2: Access Control Set-up (Separate Interface for Teacher and Student)</li><li>P3: Build the profile section for users</li></ul>  |   Set-up successful, Initial Development (Phase 1) completed            |
+| Week 2: <br>(Developing major features) | <ul><li>P0: Develop the Create Test functionalities </li><li>P4: Develop the Attempt Test functionalities </li><li>P1: Develop Test Instructions and the Test Live Preview</li><li>P3: Result compilation</li> |    Major features implemented and Bugs resolved             |
+| Week 3: <br>(Conclusion) | <ul><li>P1: Develop Result functionality with graphs</li><li>P0: Test Preview (Bug fix)</li><li>P2: Develop Final Dashboard functionality</li><li>P3: [Conclusion] Code clean-up, removing redundant code, and maintaining proper documentation</li><li>P4: Hosting the Website</li></ul>    |     Problem Statement completed successfully, improved Code Maintainability  |
 
 ## 🎯 Features:
 Check out the detailed document: [ExamPlus Features] (https://docs.google.com/document/d/1kWqUSSMTywZP3J7nt4YDqmYmVTypFjfXcYraaN3agBE/edit?usp=sharing)
