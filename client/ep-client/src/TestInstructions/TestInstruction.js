@@ -159,6 +159,10 @@ function TestInstruction(props) {
                         </p>
                       </div>
                     </div>
+                    {attempted && <div className="test__already__attempted">
+                    The test has already been attempted.
+                    </div>
+                    }
                     <div className="select__button">
                       <Button
                         type="primary"
