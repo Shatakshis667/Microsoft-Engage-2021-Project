@@ -18,7 +18,7 @@ This project has been built solely during the period of **Microsoft Engage'21 Me
 
 
 ## 🎯 Links for project:
- Heroku: [https://examplus.herokuapp.com/](https://examplus.herokuapp.com/)
+ Heroku: [https://examplus.herokuapp.com/](https://examplus.herokuapp.com/) <br>
  Video link: [https://youtu.be/HZ3pYorxKUE](https://youtu.be/HZ3pYorxKUE)
 
 ## 🎯 Agile methology and workflow:
