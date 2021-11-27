@@ -19,7 +19,7 @@ This project has been built solely during the period of **Microsoft Engage'21 Me
 
 ## 🎯 Links for project:
  Heroku: [https://examplus.herokuapp.com/](https://examplus.herokuapp.com/)
-
+ Video link: [https://youtu.be/HZ3pYorxKUE](https://youtu.be/HZ3pYorxKUE)
 
 ## 🎯 Agile methology and workflow:
 Agile methodology was followed by implementation of a sprint of 5 days in a week for 3 weeks along with continuous integration and development using Git version control. The website has been hosted on Heroku. The intent of the project, customer viewpoint, visual hierarchy and comfortable colour scheme were in mind while developing this project. Bugs were solved according to priority scale.
