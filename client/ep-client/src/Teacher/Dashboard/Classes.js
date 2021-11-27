@@ -23,7 +23,7 @@ function Classes(props) {
     <>
       <div className="left__header red__header">
         <p className="left__header__text">
-          Recent Registered Classes
+          Registered Classes
         </p>
       </div>
       <div className="left__body">
