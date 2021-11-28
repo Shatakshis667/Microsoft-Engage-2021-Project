@@ -19,7 +19,7 @@ This project has been built solely during the period of **Microsoft Engage'21 Me
 
 ## 🎯 Links for project:
  Heroku: [https://examplus.herokuapp.com/](https://examplus.herokuapp.com/) <br>
- Video link: [https://youtu.be/HZ3pYorxKUE](https://youtu.be/HZ3pYorxKUE)
+ Demo Video: [https://youtu.be/HZ3pYorxKUE](https://youtu.be/HZ3pYorxKUE)
 
 ## 🎯 Agile methology and workflow:
 Agile methodology was followed by implementation of a sprint of 5 days in a week for 3 weeks along with continuous integration and development using Git version control. The website has been hosted on Heroku. The intent of the project, customer viewpoint, visual hierarchy and comfortable colour scheme were in mind while developing this project. Bugs were solved according to priority scale.
@@ -37,7 +37,7 @@ Link to GitHub Project Dashboard: [Project Dashboard](https://github.com/users/S
 
  
 ## 🎯 Features:
-Check out the detailed document for features: [ExamPlus Features](https://docs.google.com/document/d/1kWqUSSMTywZP3J7nt4YDqmYmVTypFjfXcYraaN3agBE/edit?usp=sharing)
+Check out the detailed document for features and performance report: [ExamPlus Features](https://docs.google.com/document/d/1kWqUSSMTywZP3J7nt4YDqmYmVTypFjfXcYraaN3agBE/edit?usp=sharing)
 Feature | Feature 
 -------- | -------- 
 |**Home Page**: Home Page contains the website information customized using React and Bootstrap. <br><br> ![Home Page](https://user-images.githubusercontent.com/51702245/143594962-4162a7bd-a201-4798-9a7f-415c1e213a6e.gif) |**Sign-in**: Sign In options for registered users. Mouse Interactive UI developed using react-particle-js. <br><br> ![Sign In](https://user-images.githubusercontent.com/51702245/143594988-23e0876c-3669-4d34-891f-d249674354a8.gif) |
