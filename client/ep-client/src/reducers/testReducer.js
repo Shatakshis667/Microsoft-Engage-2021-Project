@@ -69,7 +69,6 @@ export default function (state = initialState, action) {
       };
 
     case FETCH_ATTEMPT_TEST_SUCCESS:
-      // console.log(action.tests)
       return {
         ...state,
         isFetching: false,

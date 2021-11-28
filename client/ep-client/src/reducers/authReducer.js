@@ -15,7 +15,6 @@ import {
   SEND_PASS_RESET_ERROR,
   USER_ACCOUNT_CREATED,
 } from "../actions/authActions";
-// import storageListner from "../storageListener/localStorageListener";
 
 const initialState = {
   isLoggingIn: false,
@@ -80,9 +79,7 @@ export default function (state = initialState, action) {
         isSigningUp: false,
         isLoading: false,
         signupError: false,
-        accountCreated: true,
-        // isAuthenticated: true,
-        // user: action.user,
+        accountCreated: true
       };
 
     case SIGN_UP_FAILURE:

@@ -1,4 +1,5 @@
 import { logoutUser } from "./authActions";
+// Select action types
 export const TEST_SELECTED = "TEST_SELECTED";
 export const SELECTED_TEST_RESULT = "SELECTED_TEST_RESULT";
 export const SELECTED_ASSIGNED_TEST = "SELECTED_ASSIGNED_TEST";

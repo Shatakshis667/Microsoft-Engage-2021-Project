@@ -2,8 +2,6 @@ import React, { Component } from "react";
 
 export default class Footer extends Component {
   handleNext = (e) => {
-    //this.props.handleNextButton()
-    // console.log(e.currentTarget.classList[0])
     this.props.handleFooterButtons(e.currentTarget.classList[0]);
   };
   submitTest = () => {

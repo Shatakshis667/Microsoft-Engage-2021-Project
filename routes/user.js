@@ -100,8 +100,6 @@ router.post(
           console.log("OK 200");
       }
 
-      // console.log(userData);
-
       const payload = {
         user: {
           id: user.id,
@@ -113,6 +111,7 @@ router.post(
         process.env.JWT_SECRET,
         {
           expiresIn: "3h",
+          //3 hours
         },
         (err, token) => {
           if (err) throw err;
@@ -201,7 +200,7 @@ router.post(
         process.env.JWT_SECRET,
         {
           expiresIn: "3h",
-          //3 hrs
+          //3 hours
         },
         (err, token) => {
           if (err) throw err;

@@ -1,8 +1,10 @@
 import { logoutUser } from "./authActions";
+// Submit Test action types
 export const SUBMIT_TEST_REQUEST = "SUBMIT_TEST_REQUEST";
 export const SUBMIT_TEST_SUCCESS = "SUBMIT_TEST_SUCCESS";
 export const SUBMIT_TEST_FAILURE = "SUBMIT_TEST_FAILURE";
 
+//Assigned Test action types
 export const ASSIGNED_TEST_REQUEST = "ASSIGNED_TEST_REQUEST";
 export const ASSIGNED_TEST_SUCCESS = "ASSIGNED_TEST_SUCCESS";
 export const ASSIGNED_TEST_FAILURE = "ASSIGNED_TEST_FAILURE";

@@ -123,7 +123,7 @@ function Signup(props) {
                 },
               ]}
             >
-              <Input type="tel" placeholder="7275XXXXXX" />
+              <Input type="tel" placeholder="XXXXXXXXXX" />
             </Form.Item>
 
             <div className="element__wrapper">

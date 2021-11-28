@@ -15,15 +15,12 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case UPDATE_ATTEMPT_TEST_REQUEST:
-      // console.log("login success fired", action.obj)
       return {
         ...state,
         isFetching: true,
       };
 
     case UPDATE_ATTEMPT_TEST_SUCCESS:
-      // console.log("login success fired", action.obj)
-      //console.log(action.data);
       const checker = state.initializeTimer;
       return {
         ...state,
@@ -33,7 +30,6 @@ export default function (state = initialState, action) {
         initializeTimer: true,
       };
     case UPDATE_ATTEMPT_TEST_FAILURE:
-      // console.log("login success fired", action.obj)
       return {
         ...state,
         isFetching: false,
